@@ -1318,7 +1318,7 @@ def load(filepath):
                         fps = xAnalyseFPS(xDocSkeletonData)
                         if(fps and config.get('ROUND_FRAMES')):
                             logger.info("Setting FPS to", fps)
-                            bpy.context.scene.render.fps = fps
+                            bpy.context.scene.render.fps = int(fps)
                         xCollectAnimations(meshData, xDocSkeletonData)
 
             else:
